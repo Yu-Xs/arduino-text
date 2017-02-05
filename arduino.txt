@@ -1,4 +1,4 @@
-arduino
+﻿arduino
 
 	通訊
 	Serial.begin(int int);
@@ -10,3 +10,8 @@ arduino
 	stepper.setSpeed(long RAM);
 	stepper.step(int int);
 	
+	藍芽
+	SoftwareSerial.h
+	SoftwareSerial N( TX, RX);
+	
+
