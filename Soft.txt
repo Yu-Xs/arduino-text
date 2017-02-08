@@ -1,0 +1,13 @@
+﻿Sublime text3
+	setting
+		"auto_match_enabled":false,		取消自動補上括號
+		"gutter": true,				設置為false以完全隱藏裝訂線
+		"margin": 4,				在水槽和文本之間的間距
+		"fold_buttons": true,			折疊按鈕是在折疊區域顯示的三角形
+		"fade_fold_buttons": true,		隱藏折疊按鈕，除非鼠標在水槽上
+		"rulers": [],				顯示垂直標尺的列
+		"spell_check": false,			設置為true可默認打開拼寫檢查
+		"tab_size": 4,				標籤被認為等於的空格數
+		"translate_tabs_to_spaces": false,	設置為true可在按Tab鍵時插入空格
+		"use_tab_stops": true,			如果translate_tabs_to_spaces為true，use_tab_stops將使製表符和退格插入/刪除直到下一個製表符
+		"detect_indentation": true,		設置為false可禁用標籤對加載時空格的檢測

@@ -13,7 +13,8 @@
 	藍芽
 	SoftwareSerial.h
 	SoftwareSerial N( TX, RX);
-
+	
+	IC2通訊
 	Wire.h
 	Wire.begin(<address>);
 	Wire.beginTransmission(<address>);
