@@ -14,7 +14,7 @@ void setup(){
 	BT.write("Start Xs");
 }
 
-char val;
+int val;
 int stus = 4;
 
 void loop(){
@@ -22,45 +22,50 @@ void loop(){
 	if(BT.available()){				//android to arduino status
 		val = BT.read();
 
+		Serial.println(val);
+
 		if(val == 7){
 			BT.write(val);
 			BT.write(stus);
 		}else{
 			stus = val;
 		}
-	}
 
-	if(stus == 1){							//arduino to arduino
-		val = 1;						//arduino left address 1
-										//arduino right address 2
-		Wire.beginTransmission(1);
-		Wire.write(val);
-		Wire.endTransmission();
 
-		Wire.beginTransmission(2);
-		Wire.write(val);
-		Wire.endTransmission();
-	}else if(stus == 2){
-		val = 2;
+		if(stus == 1){							//arduino to arduino
+			val = 1;						//arduino left address 1
+											//arduino right address 2
+			Wire.beginTransmission(1);
+			Wire.write(val);
+			Wire.endTransmission();
 
-		Wire.beginTransmission(1);
-		Wire.write(val);
-		Wire.endTransmission();
-	}else if(stus == 3){
-		val = 2;
+			Wire.beginTransmission(2);
+			Wire.write(val);
+			Wire.endTransmission();
+		}else if(stus == 2){
+			val = 2;
 
-		Wire.beginTransmission(2);
-		Wire.write(val);
-		Wire.endTransmission();
-	}else if(stus == 4){
-		val = 2;
+			Wire.beginTransmission(1);
+			Wire.write(val);
+			Wire.endTransmission();
+		}else if(stus == 3){
+			val = 2;
 
-		Wire.beginTransmission(1);
-		Wire.write(val);
-		Wire.endTransmission();
+			Wire.beginTransmission(2);
+			Wire.write(val);
+			Wire.endTransmission();
+		}else if(stus == 4){
+			val = 2;
 
-		Wire.beginTransmission(2);
-		Wire.write(val);
-		Wire.endTransmission();
+			Wire.beginTransmission(1);
+			Wire.write(val);
+			Wire.endTransmission();
+
+			Wire.beginTransmission(2);
+			Wire.write(val);
+			Wire.endTransmission();
+		}
+
+		Serial.println(val);
 	}
 }

@@ -3,12 +3,14 @@
 	通訊
 	Serial.begin(int int);
 	Serial.println(string);
+	Serial.available();
+	Serial.read();
 	
 	步進馬達
 	Stepper.h
 	Stepper N(setp, pin1, pin2, pin3, pin4);
 	stepper.setSpeed(long RAM);
-	stepper.step(int int);
+	stepper.step(int);
 	
 	藍芽
 	SoftwareSerial.h

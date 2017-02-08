@@ -25,7 +25,7 @@ int stus = 2;
 void loop(){
 	if(stus == 1){
 		Serial.println("start");
-		left_stepper.step(2049);
+		left_stepper.step(77);
 	}else{
 		Serial.println("stop");
 	}

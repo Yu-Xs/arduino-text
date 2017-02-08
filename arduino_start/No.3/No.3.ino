@@ -14,18 +14,18 @@ void setup(){
 	Wire.begin(2);
 	Wire.onReceive(status);
 
-	left_stepper.setSpeed(7);
+	right_stepper.setSpeed(7);
 
 	Serial.println("Start right_stepper");
 }
 
-char val;
+int val;
 int stus = 2;
 
 void loop(){
 	if(stus == 1){
 		Serial.println("start");
-		left_stepper.step(2049);
+		right_stepper.step(-77);
 	}else{
 		Serial.println("stop");
 	}
@@ -35,7 +35,8 @@ void status(){
 
 	if(Wire.available()){
 		val = Wire.read();
-
+		Serial.println("OK");
+		delay(5000);
 		stus = val;
 	}
 }
