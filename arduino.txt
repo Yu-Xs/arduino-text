@@ -13,5 +13,13 @@
 	藍芽
 	SoftwareSerial.h
 	SoftwareSerial N( TX, RX);
-	
+
+	Wire.h
+	Wire.begin(<address>);
+	Wire.beginTransmission(<address>);
+	Wire.endTransmission();
+	Wire.write(<date>);
+	Wire.onReceive(<function>);
+	Wire.available();
+	Wire.read();
 
