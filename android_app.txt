@@ -1,0 +1,74 @@
+package me.Sample;
+
+import android.app.Activity;
+
+public class Sample2 extends Activity {
+	public void onCreate(Bundle savedInstanceState){
+		super.onCreate(savedInstanceState);
+	}
+
+	public boolean onTouchEvent(MotionEvent e){
+		e.getAction()
+			MotionEvent.AVTION_DOWN
+			MotionEvent.ACTION_UP
+	}
+
+	public boolean onKeyDown(int keycode, KeyEvent e){
+		KeyEvent.KEYCODE_DPAD_UP
+	}
+
+	OnCheckedVhange(CompoundButton cb, boolean isChecked)	//Listener
+	ItemClick(AdapterView<?>v, View iv, int pos, long id)
+	ItemSelected(AdpterView<?>v, View iv, int pos, long id)
+}
+
+android.widget.LinearLayout
+	LinearLayout N = new LinearLayout(this) ;
+	N.setOrientation(int ort)
+		LinearLayout.VERTICAL
+		LinearLayour.HORIZONTAL
+	setContentView(N);
+	N.addView(N);
+
+android.widget.TableLayout
+	TableLayout(Content cn)
+	TableRow N = new TableRow(this)
+	TableRow [] N = new TableRow[int]
+	RelativeLayout(Context cn)
+	FrameLayout(Context cn)
+
+Button
+	N.setOnClickListener(new SampleClickListener())
+	
+	OnClickListener
+	onClick()
+	setOnClickLitener()
+		class SampleClickListener implements OnClickListener{
+			public void onClick(View v){
+
+			}
+		}
+
+	OnTouchListener
+	onTouch()
+	setOnTouchLitener()
+		onTouch(View v, MotionEvent e)
+			e.getAction()
+				MotionEvent.AVTION_DOWN
+				MotionEvent.ACTION_UP
+
+TextView N = new TextView(this);
+N.setText(string);
+
+android.app
+android.content
+android.os
+android.graphics
+android.media
+android.view
+android.widget		-------TextView
+
+Activity		------onCreate()
+		------onResume()
+		------onPause()
+		------onDestroy()
