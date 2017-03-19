@@ -11,3 +11,4 @@
 		"translate_tabs_to_spaces": false,	設置為true可在按Tab鍵時插入空格
 		"use_tab_stops": true,			如果translate_tabs_to_spaces為true，use_tab_stops將使製表符和退格插入/刪除直到下一個製表符
 		"detect_indentation": true,		設置為false可禁用標籤對加載時空格的檢測
+		"match_tags":false			自動tag
