@@ -104,6 +104,20 @@ void setup() {
 void loop() {
 	kalman();
 
+	if(Serial.available()){										//PID調整
+		string N_string = Serial.read();
+		Kp = N_string.toInt();
+
+		N_string = Serial.read();
+		Ki = N_string.toInt();
+
+		N_string = Serial.read();
+		Kd = N_string.toInt();
+		
+		SetTunings(Kp, Ki, Kd);
+	}
+
+
 	Input = abs(agy);
 	carPID.Compute();
 	Drive(Output);
